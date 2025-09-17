@@ -392,4 +392,65 @@ p {
   padding: 1rem;
   border: none;
   background-color: rgb(216.3276595745, 218.4425531915, 222.6723404255);
+}
+
+.acciones {
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .acciones {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.acciones a {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000;
+}
+.acciones a:last-of-type {
+  margin-bottom: 0;
+}
+
+.login {
+  margin-top: 5rem;
+}
+.login .uptask {
+  background: linear-gradient(to right, #0891B2 0%, rgb(5.8064516129, 105.2419354839, 129.1935483871) 100%);
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+  font-size: 7rem;
+}
+@media (min-width: 768px) {
+  .login .uptask {
+    font-size: 10rem;
+  }
+}
+.login input[type=submit] {
+  background-color: #0891B2;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .login input[type=submit] {
+    width: auto;
+  }
+}
+.login input[type=submit]:hover {
+  background-color: rgb(5.8064516129, 105.2419354839, 129.1935483871);
+  cursor: pointer;
+}
+.login .acciones a {
+  color: #0891B2;
 }/*# sourceMappingURL=app.css.map */

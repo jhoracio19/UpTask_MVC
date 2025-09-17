@@ -30,7 +30,7 @@ class LoginController {
 
         // Render de la vista
         $router -> render('auth/crear', [
-            'titulo' => 'Crea tu cuenta'
+            'titulo' => 'Crea tu cuenta en UpTask'
         ]);
     }
 
