@@ -426,6 +426,11 @@ p {
   border-left: 0.5rem solid rgb(169, 0, 0);
   color: rgb(169, 0, 0);
 }
+.alerta.exito {
+  background-color: #abffab;
+  border-left: 0.5rem solid rgb(0, 120, 0);
+  color: rgb(0, 120, 0);
+}
 
 .login {
   margin-top: 5rem;
