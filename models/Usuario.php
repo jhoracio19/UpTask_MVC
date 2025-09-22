@@ -4,7 +4,7 @@ namespace Model;
 
 class Usuario extends ActiveRecord{
     protected static $tabla = 'usuarios';
-    protected static $columanDB = ['id','nombre','email','password','token', 'confirmado'];
+    protected static $columnasDB = ['id','nombre','email','password','token', 'confirmado'];
 
     // Declarar visibilidad
     public $id;
@@ -23,7 +23,7 @@ class Usuario extends ActiveRecord{
         $this->password = $args['password'] ?? '';
         $this->password2 = $args['password2'] ?? null;
         $this->token = $args['token'] ?? '';
-        $this->confirmado = $args['confirmado'] ?? '';
+        $this->confirmado = $args['confirmado'] ?? 0;
     }
 
     //V alidación para cuentas nuevas
@@ -47,4 +47,13 @@ class Usuario extends ActiveRecord{
         return self::$alertas;
     }
 
+    // Hashea el password
+    public function hashPassword(){
+        $this -> password = password_hash($this->password, PASSWORD_BCRYPT);
+    }
+
+    // Generar un token
+    public function crearToken(){
+        $this -> token = uniqid();
+    }
 }
